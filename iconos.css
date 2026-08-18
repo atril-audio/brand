@@ -1,0 +1,17 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PEDALERA · el contrato del set de iconos · fijado 2026-08-17
+   El dibujo es el mismo en los tres pesos: cambia una clase, no el icono.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.ico {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--peso-icono, 2);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* 13–18px · barra de herramientas, facetas */
+.ico.medio { --peso-icono: 2.3; }
+/* ≤12px · el pie del nodo (`.mini` corre a 10.5px) y los chips.
+   Sin esto el trazo mide 0.9px y el icono desaparece. */
+.ico.chico { --peso-icono: 2.8; }

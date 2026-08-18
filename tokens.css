@@ -1,0 +1,130 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PEDALERA · EL SISTEMA
+   Destilado el 2026-08-17 de las decisiones del taller. Un bloque, sin
+   `[data-*]`: esto ya no es una opción, es el sistema.
+
+   Cadena de decisiones que lo produjo (cada una en ../../DECISIONES.md):
+     Dirección   A · El estudio a oscuras
+     Paleta      P2 · Grafito neutro         (base sin tinte · señal cyan · medida crema)
+     Tipografía  T6 · Chivo / Roboto Mono
+     Forma       F2 · radios medios
+     Refinamiento E1 · Aire                  (espacio y trazo fino · cero color)
+     Medidor     el degradado vive en el RIEL, no en el relleno
+     Monitoreo   sin borde de color · lo separa la superficie
+
+   LA REGLA QUE GOBIERNA TODO: el color aparece cuando algo está pasando.
+   Si algo no mide, no pasa y no es señal → es gris.
+
+   Este archivo es el que gradúa a `UI/tokens.css` en el repo. Cuando eso pase,
+   ninguna regla de la interfaz debe escribir un color a mano.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ─── SUPERFICIE ──────────────────────────────────────────────────────────
+     Cuatro planos y dos líneas. Más de cuatro no se distinguen a esta
+     luminosidad, y fue lo que produjo los casi-duplicados que midió F0. */
+  --fondo:        #101012;   /* el lienzo, el plano de fondo */
+  --panel:        #191a1d;   /* barra, nodos, cajón, ficha */
+  --panel-alto:   #232428;   /* lo que flota: popovers, fila activa, monitoreo */
+  --panel-hondo:  #0b0b0d;   /* lo hundido: campos, marcos de medición */
+  --linea:        #2f3035;   /* divisor visible */
+  --linea-sutil:  #202126;   /* divisor casi invisible: filas de lista, grilla */
+
+  /* ─── TEXTO · tres niveles, no más ─────────────────────────────────────── */
+  --texto:        #e8e8ea;   /* nombres, números que importan */
+  --texto-sec:    #adaeb3;   /* prosa, lectura */
+  --tenue:        #7c7d83;   /* etiquetas, unidades, lo que se lee si lo buscás */
+
+  /* ─── SEÑAL · el color solo acá ────────────────────────────────────────── */
+  --acento:       #4ec5d4;   /* está pasando: nivel, selección, lo vivo */
+  --acento-tinta: #05171b;   /* texto sobre acento */
+  --medida:       #d9c9a8;   /* la MEDICIÓN: números, ejes, trazas, rótulos de dato */
+  --aviso:        #e0655c;   /* contrafase, error, recorte */
+  --ok:           #6ba876;   /* en verde */
+  --cable:        #5b5d63;   /* el hilo en reposo — gris: un cable no está pasando nada */
+
+  /* ─── MEDICIÓN ────────────────────────────────────────────────────────────
+     El degradado vive en el RIEL: el riel ES la escala, así que el rojo queda
+     siempre en el mismo lugar y el medidor se lee de reojo. Es el argumento del
+     medidor de hardware, y es el caso de uso real — tenés las manos en la
+     guitarra y no podés leer un número. */
+  --riel:         #232429;
+  --pico-bajo:    #5aa06f;
+  --pico-medio:   #d3ab5c;
+  --pico-alto:    #e0655c;
+  --escala-pico:  linear-gradient(90deg, var(--pico-bajo) 0 55%,
+                                         var(--pico-medio) 78%,
+                                         var(--pico-alto) 100%);
+
+  /* ─── MARCAS DE FABRICANTE ────────────────────────────────────────────────
+     Cinco tonos para la barra izquierda del nodo y de la fila. No son señal:
+     son identidad, así que no compiten con --acento ni con los picos. */
+  --marca-1:      #7f9ad9;
+  --marca-2:      #9280d9;
+  --marca-3:      #cc8a5c;
+  --marca-4:      #5fb58c;
+  --marca-5:      #c6607a;
+
+  /* ─── TIPOGRAFÍA ──────────────────────────────────────────────────────────
+     El mono no es decoración: carga TODOS los números (dB, %, latencia) y todas
+     las etiquetas en versalitas. Chivo aguanta peso alto en tamaños chicos. */
+  --sans:         "Chivo", system-ui, -apple-system, sans-serif;
+  --mono:         "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --peso-tit:     600;
+  --track-mono:   .15em;
+
+  /* ─── ESCALA TIPOGRÁFICA ──────────────────────────────────────────────────
+     Siete pasos reemplazan los 15 tamaños sueltos que midió F0. */
+  --t-micro:      8.5px;   /* etiquetas en versalitas */
+  --t-dato:       9px;     /* dB, %, unidades */
+  --t-menor:      11px;    /* pie de nodo, meta */
+  --t-cuerpo:     12px;    /* prosa, filas de lista */
+  --t-mayor:      13.5px;  /* nombre de nodo, botones */
+  --t-titulo:     15px;    /* título de ficha */
+  --t-display:    19px;    /* el número grande del diagnóstico */
+
+  /* ─── ESPACIO · E1 «Aire» ─────────────────────────────────────────────────
+     La elegancia sale de acá, no del color: el MVP creció apurado y quedó
+     denso. Siete pasos, y nada de valores fuera de la escala. */
+  --e1:  4px;
+  --e2:  7px;
+  --e3: 10px;
+  --e4: 13px;
+  --e5: 16px;
+  --e6: 20px;
+  --e7: 26px;
+
+  /* ─── TRAZO · E1 ──────────────────────────────────────────────────────────
+     Bordes al pelo, medidores delgados, cables finos. Es el otro medio kilo de
+     la elegancia y no cuesta un solo color. */
+  --peso-borde:   .5px;
+  --peso-hilo:    1;
+  --alto-riel:    3px;
+
+  /* ─── FORMA · F2 ──────────────────────────────────────────────────────────
+     Tres radios reemplazan los 17 sueltos que midió F0. */
+  --radio:          7px;
+  --radio-chico:    4px;
+  --radio-pastilla: 999px;
+  --borde-nodo:     1px;   /* la barra de marca del nodo, que sí se ve */
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PUENTE DE NOMBRES · TEMPORAL
+   La interfaz de hoy usa `--panel2`, `--panel3` y `--oro`. Mientras no se
+   renombren en `UI/index.html`, estos alias hacen que el sistema nuevo se
+   aplique sin tocar una línea de la app — que es justo lo que permite
+   fotografiarla con `disparar.py --tokens` antes del gate del `meta`.
+   BORRAR cuando la interfaz hable el vocabulario nuevo.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* OJO: la escalera de la app SUBE — fondo < panel < panel2 < panel3 — así que
+     `panel3` es el plano MÁS CLARO, no el hundido. Mapearlo a `--panel-hondo`
+     invertía la jerarquía y hundía los popovers. `panel3` se deriva un paso
+     arriba de `--panel-alto` en vez de inventar un color nuevo. */
+  --panel2: var(--panel-alto);
+  --panel3: color-mix(in srgb, var(--panel-alto) 88%, var(--texto) 12%);
+  --oro:    var(--medida);
+}

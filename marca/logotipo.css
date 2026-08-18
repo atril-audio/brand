@@ -1,0 +1,24 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PEDALERA · LOGOTIPO — fijado 2026-08-17
+   Tratamiento elegido: MONO ESPACIADO. Es la misma letra que la interfaz usa
+   para todas sus etiquetas, así que la marca no llega de afuera: ya estaba ahí.
+
+   El lockup se mide en ALTURAS DEL SÍMBOLO, nunca en px, así que no se rompe
+   al escalar. Se usa con `--alto` en el contenedor.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.marca-lock {
+  --alto: 40px;                 /* la única medida que se toca */
+  display: inline-flex; align-items: center;
+  gap: calc(var(--alto) * .42); /* aire NORMAL */
+  color: currentColor;
+}
+.marca-lock > svg { width: var(--alto); height: var(--alto); flex: none; fill: currentColor; }
+.marca-lock > .palabra {
+  font-family: "Roboto Mono", ui-monospace, monospace;
+  font-weight: 400;
+  font-size: calc(var(--alto) * .53);
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+/* aire mínimo alrededor del lockup: media altura del símbolo. Nada entra ahí. */

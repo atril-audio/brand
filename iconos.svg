@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PEDALERA · SET DE ICONOS DE LÍNEA · fijado 2026-08-17
+     20 símbolos. Grilla de 24 · fill:none · stroke:currentColor · remates y
+     uniones redondeados. El peso NO está acá: lo pone el CSS por tamaño.
+
+     Uso:  <svg class="ico chico"><use href="#ico-bypass"/></svg>
+
+     El peso por tamaño no es cosmético: los botones del nodo corren a 10.5px
+     y un trazo de 2.0 mide 0.9px ahí. Ver iconos.css.
+     ══════════════════════════════════════════════════════════════════════ -->
+  <symbol id="ico-bypass" viewBox="0 0 24 24"><!-- bypass · pie del nodo · 10.5px -->
+    <path d="M12 4v7"/><path d="M7.05 7.05a7 7 0 1 0 9.9 0"/>
+  </symbol>
+  <symbol id="ico-cambiar" viewBox="0 0 24 24"><!-- cambiar · pie del nodo · 10.5px -->
+    <path d="M4 9h13l-3.2-3.2"/><path d="M20 15H7l3.2 3.2"/>
+  </symbol>
+  <symbol id="ico-abrir" viewBox="0 0 24 24"><!-- abrir el plugin · pie del nodo · 10.5px -->
+    <path d="M14.5 4.5l5 5L9 20H4v-5z"/>
+  </symbol>
+  <symbol id="ico-sacar" viewBox="0 0 24 24"><!-- sacar · pie del nodo · 10.5px -->
+    <path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>
+  </symbol>
+  <symbol id="ico-puesto" viewBox="0 0 24 24"><!-- lugar reservado · nodo de plantilla -->
+    <path d="M9 4.5H6.5a2 2 0 0 0-2 2V9M4.5 15v2.5a2 2 0 0 0 2 2H9"/> <path d="M15 4.5h2.5a2 2 0 0 1 2 2V9M19.5 15v2.5a2 2 0 0 1-2 2H15"/>
+  </symbol>
+  <symbol id="ico-verificado" viewBox="0 0 24 24"><!-- verificado · referencia de plantilla -->
+    <path d="M5 12.5l4.5 4.5L19 6.5"/>
+  </symbol>
+  <symbol id="ico-desplegar" viewBox="0 0 24 24"><!-- desplegar · faceta, cuenta de trabajos -->
+    <path d="M6.5 10l5.5 5.5L17.5 10"/>
+  </symbol>
+  <symbol id="ico-expandir" viewBox="0 0 24 24"><!-- expandir · lista, ficha -->
+    <path d="M10 6.5l5.5 5.5L10 17.5"/>
+  </symbol>
+  <symbol id="ico-mono" viewBox="0 0 24 24"><!-- plegar a mono · franja de monitoreo -->
+    <path d="M12 4.5v15"/><path d="M4 12h4M20 12h-4"/> <path d="M6.5 9.5L4 12l2.5 2.5M17.5 9.5L20 12l-2.5 2.5"/>
+  </symbol>
+  <symbol id="ico-plugins" viewBox="0 0 24 24"><!-- plugins · barra · 12px -->
+    <path d="M4.5 5.5h6v6h-6zM13.5 5.5h6v6h-6zM4.5 13.5h6v6h-6zM13.5 13.5h6v6h-6z"/>
+  </symbol>
+  <symbol id="ico-buscar" viewBox="0 0 24 24"><!-- buscar · barra · 12px -->
+    <path d="M16.5 11a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/><path d="M15.2 15.2L19.5 19.5"/>
+  </symbol>
+  <symbol id="ico-nivel" viewBox="0 0 24 24"><!-- nivel · barra · 12px -->
+    <path d="M4 12h16"/><path d="M12.4 8.4h3.2v7.2h-3.2z"/>
+  </symbol>
+  <symbol id="ico-trabajo" viewBox="0 0 24 24"><!-- trabajo · barra · 12px -->
+    <path d="M10.5 4.5H5.5a1 1 0 0 0-1 1v5l9 9 6-6-9-9z"/><path d="M8 8h.01"/>
+  </symbol>
+  <symbol id="ico-rigs" viewBox="0 0 24 24"><!-- rigs · barra · 12px -->
+    <path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/>
+  </symbol>
+  <symbol id="ico-plantillas" viewBox="0 0 24 24"><!-- plantillas · barra · 12px -->
+    <path d="M6 4.5h8.5L18 8v11.5H6z"/><path d="M9 11.5h6M9 15h4"/>
+  </symbol>
+  <symbol id="ico-analisis" viewBox="0 0 24 24"><!-- análisis · franja de monitoreo -->
+    <path d="M3 12h3l3-6.5 3 13 3-9.5 2.5 3H21"/>
+  </symbol>
+  <symbol id="ico-foto" viewBox="0 0 24 24"><!-- miniatura · rig guardado -->
+    <path d="M4.5 8h3l1.5-2h6L16.5 8h3v11.5h-15z"/><path d="M15 13.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  </symbol>
+  <symbol id="ico-escanear" viewBox="0 0 24 24"><!-- escanear · barra · 12px -->
+    <path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.5 5v4.5H15"/>
+  </symbol>
+  <symbol id="ico-vaciar" viewBox="0 0 24 24"><!-- vaciar · barra · 12px -->
+    <path d="M5 7.5h14M9.5 7.5V5h5v2.5"/><path d="M7 7.5v12h10v-12"/>
+  </symbol>
+  <symbol id="ico-deshacer" viewBox="0 0 24 24"><!-- deshacer · barra · 12px -->
+    <path d="M4.5 10.5h8.5a4.75 4.75 0 1 1 0 9.5H8.5"/><path d="M4.5 10.5l4-4M4.5 10.5l4 4"/>
+  </symbol>
+</svg>

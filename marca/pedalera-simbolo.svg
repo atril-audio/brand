@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" role="img" aria-label="Pedalera">
+  <!-- PEDALERA · símbolo canónico · Atril · fijado 2026-08-17
+       El interruptor: la tuerca hexagonal y el botón de un footswitch, desde arriba.
+       Variante B «botón adelante» — hueco 7.3 · botón 5.4.
+       Grilla de 24, centro 12,12. Todo en masa. Monocromo: currentColor.
+       NO igualar el grosor del anillo: es más grueso en los vértices (3.6) que en
+       las caras (1.36) porque una tuerca real tiene más material en las esquinas.
+       Verificado a 16px reales: el anillo y el botón se leen. -->
+  <path fill-rule="evenodd" d="M22.00 12.00 L17.00 20.66 L7.00 20.66 L2.00 12.00 L7.00 3.34 L17.00 3.34 Z M4.7 12 A7.3 7.3 0 1 0 19.3 12 A7.3 7.3 0 1 0 4.7 12 Z"/>
+  <path d="M6.6 12 A5.4 5.4 0 1 0 17.4 12 A5.4 5.4 0 1 0 6.6 12 Z"/>
+</svg>

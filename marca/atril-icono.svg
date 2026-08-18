@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="Atril">
+  <!-- ATRIL · ícono de aplicación · el símbolo calado en una masa.
+       Destino principal: el avatar de github.com/atril-audio (hoy es el identicon
+       por defecto de GitHub, y la verificación de publisher pide que no lo sea). -->
+  <rect width="24" height="24" rx="5.4" fill="currentColor"/>
+  <g transform="translate(3.4,3.4) scale(0.717)" fill="#101012">
+    <path d="M14.00 9.60 L13.35 1.60 L10.65 1.60 L10.00 9.60 Z M13.08 14.93 L20.33 18.37 L21.68 16.03 L15.08 11.47 Z M8.92 11.47 L2.32 16.03 L3.67 18.37 L10.92 14.93 Z"/>
+  <path fill-rule="evenodd" d="M7.7 12 A4.3 4.3 0 1 0 16.3 12 A4.3 4.3 0 1 0 7.7 12 Z M10.0 12 A2.0 2.0 0 1 0 14.0 12 A2.0 2.0 0 1 0 10.0 12 Z"/>
+  </g>
+</svg>
