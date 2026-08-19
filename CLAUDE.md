@@ -57,5 +57,52 @@ silencio y en otro repo: llevan ADR y aviso.
 - **Commits en español, imperativo, con el PORQUÉ en el cuerpo.**
 - **La documentación viaja en el mismo PR** (DoD, punto 4).
 
-⚠️ **Las skills de Spec Kit solo se cargan si la sesión está rooteada en este repo** (`.claude/skills/`).
-Desde el hub no existen, y es fácil escribir la spec a mano sin notar que había un ciclo.
+## El flujo SDD
+
+### ¿Lleva spec o no? La significancia decide — y aquí casi nada la lleva
+
+Este repo es **ejecución sobre un sistema ya decidido**, así que la mayoría del trabajo va sin spec.
+La tabla del rulebook §2, traducida a lo que de verdad pasa aquí:
+
+| lo que estás por hacer | ruta |
+|---|---|
+| corregir un valor obviamente mal, un typo, una descripción | **rama → PR → merge.** Sin spec |
+| **agregar** un token a un grupo que ya existe | **rama → PR → merge.** Agregar es seguro |
+| **renombrar o borrar** un token | **SDD + ADR** — rompe a quien consume, en silencio y en otro repo |
+| cambiar **cómo se genera** o **cómo se consume** el sistema | **SDD + ADR** |
+| tocar una marca, o agregar una nueva | **SDD**, y pasa por el gate de los 16px ([ADR-0002](docs/adr/0002-toda-marca-se-verifica-a-16px-reales.md)) |
+| una pieza nueva que cambia lo que un consumidor puede hacer *(tema claro, salida iOS)* | **PRD + SDD** |
+
+**Regla de bolsillo:** *si al terminar alguien pudiera preguntar «¿por qué así?», hay spec.* Y el
+corolario: **escribir una spec para un typo también está mal** (§6 del rulebook).
+
+### El ciclo, cuando sí lleva
+
+```
+/speckit-specify   → la spec          docs/specs/NNN-<slug>/spec.md
+/speckit-clarify   → preguntas antes de planear (opcional, recomendada)
+/speckit-plan      → el plan técnico
+/speckit-tasks     → las tareas
+/speckit-taskstoissues  → ⭐ las tareas bajan a issues, como SUB-ISSUES de su épica
+/speckit-implement → ejecuta
+```
+
+### Las trampas, aprendidas corriéndolo
+
+⚠️ **Las skills solo se cargan si la sesión está rooteada en este repo** (`.claude/skills/`). Desde el
+hub **no existen**, y es fácil escribir la spec a mano sin notar que había un ciclo. **Pasó el
+2026-08-19 con las specs 001 y 002 de este repo.**
+
+⚠️ **Las specs van en `docs/specs/`, no en `specs/`**, y las skills lo respetan solo si
+`/speckit-specify` escribió `.specify/feature.json` con la ruta resuelta.
+
+⚠️ **La rama NO sigue a Spec Kit:** manda el rulebook §4 (`<tipo>/<slug>`). El número de spec y el
+nombre de rama están desacoplados, así que `create-new-feature.sh` **no se usa tal cual**.
+
+⚠️ **La checklist de calidad del paso 7 se CORRE, no se marca.** Si sale toda en verde a la primera, no
+la corriste.
+
+⚠️ **No inventes los artefactos que no aplican** — sin modelo de datos no hay `data-model.md`, y en el
+Constitution Check «no aplica» es una respuesta válida. Fingir que aplica, no.
+
+⚠️ **Máximo 3 `[NEEDS CLARIFICATION]`**. Si hacen falta más, la feature no está entendida.
