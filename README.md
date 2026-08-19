@@ -14,6 +14,8 @@ traducción. No hay código de producto acá: solo tokens, marcas y assets.
 | `tokens.json` | ⭐ **la fuente de verdad** — el sistema en formato [DTCG](https://tr.designtokens.org/format/): 50 tokens tipados, cada uno con su porqué en `$description` |
 | `tokens.css` | **generado** de `tokens.json` con `npm run build`. Es lo que consumen los builds. **No se edita a mano** |
 | `compat/` | el puente de nombres **temporal** para la app vieja, con su gatillo de borrado. No es el sistema |
+| `fuentes.css` | los `@font-face` de Chivo y Roboto Mono, servidas desde **este** repo |
+| `fuentes/` | los `woff2` **variables** + **las licencias OFL** (no se borran) + la sonda de verificación |
 | `iconos.svg` | el sprite de 20 iconos de línea, un `<symbol>` cada uno |
 | `iconos.css` | el contrato del set: `.ico` + los tres pesos |
 | `marca/` | símbolo e ícono de cada producto, y el lockup del logotipo |
@@ -26,8 +28,12 @@ Nada de copiar y pegar: **el que consume trae el archivo, no sus valores.**
 
 | consumidor | mecanismo |
 |---|---|
-| **Pedalera** (CMake / C++) | el build trae `tokens.css`, `iconos.svg` e `iconos.css` a `UI/` |
+| **Pedalera** (CMake / C++) | el build trae `tokens.css`, `fuentes.css`, `fuentes/`, `iconos.svg` e `iconos.css` a `UI/` |
 | una web futura | `npm i` del repo, o por CDN |
+
+⚠️ **`fuentes.css` no es opcional si querés que se vea como Pedalera.** Nombrar `"Chivo"` en
+`tokens.css` no la provee: sin `fuentes.css` (o sin red, con un `<link>` a Google) el texto cae al font
+del sistema y el gain staging deja de ser monoespaciado. Ver [`fuentes/`](fuentes/).
 
 El mecanismo exacto está en
 [`atril-meta/why/0002-como-se-consume-brand.md`](https://github.com/atril-audio/meta/blob/main/why/0002-como-se-consume-brand.md).

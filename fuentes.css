@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ATRIL · LAS TIPOGRAFÍAS, EMPAQUETADAS
+
+   Chivo y Roboto Mono servidas desde ESTE repo, no desde Google Fonts. El
+   motivo es el caso de uso real: Pedalera corre dentro de Live, y adentro de
+   Live puede no haber internet. Con un `<link>` a fonts.googleapis.com, un
+   músico sin conexión ve el plugin con la tipografía del sistema — o sea, no
+   ve Pedalera.
+
+   Son las VARIABLES: un archivo por familia y subset cubre todo el rango de
+   peso (`font-weight: 200 900`), en vez de un archivo por peso.
+
+   Subsets: `latin` y `latin-ext` solamente. `latin` (U+0000-00FF) ya cubre
+   todos los acentos del español, los signos de apertura y las flechas ↑↓ que
+   usa la interfaz. NO se empaquetan griego, cirílico ni vietnamita.
+   🔔 Gatillo: si Atril se localiza a uno de esos, se re-empaqueta acá.
+
+   ⚠️ Los glifos de teclado (⌘ ⇧ ⌥ ⏎ ⋯ ↗) están FUERA de estos subsets, igual
+   que estaban fuera de lo que servía Google. Caen al font del sistema, hoy y
+   antes: no es una regresión de este cambio. Está inventariado como
+   «reemplazar los glifos» en el informe del taller.
+
+   Licencias: las dos familias son SIL Open Font License 1.1 y redistribuirlas
+   EXIGE incluirla — están en `fuentes/OFL-Chivo.txt` y
+   `fuentes/LICENSE-RobotoMono.txt`. No borrarlas.
+
+   Generado de la API de Google Fonts el 2026-08-19 · Chivo v21 · Roboto Mono v31
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Chivo · latin-ext */
+@font-face {
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('fuentes/chivo-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Chivo · latin */
+@font-face {
+  font-family: 'Chivo';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('fuentes/chivo-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Roboto Mono · latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 200 600;
+  font-display: swap;
+  src: url('fuentes/roboto-mono-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Roboto Mono · latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 200 600;
+  font-display: swap;
+  src: url('fuentes/roboto-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

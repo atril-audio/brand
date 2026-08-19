@@ -1,0 +1,53 @@
+<!doctype html><meta charset="utf-8"><title>sonda de fuentes</title>
+<link rel="stylesheet" href="../fuentes.css">
+<style>
+ body{background:#101012;color:#e8e8ea;font-family:system-ui;padding:24px}
+ .m{font-family:'Chivo',serif;font-size:40px;white-space:nowrap;display:inline-block}
+ .k{font-family:'Roboto Mono',serif;font-size:40px;white-space:nowrap;display:inline-block}
+ .f{font-family:serif;font-size:40px;white-space:nowrap;display:inline-block}
+ pre{font-family:ui-monospace;font-size:13px;color:#4ec5d4;background:#191a1d;padding:12px;border-radius:7px}
+</style>
+<div id=v></div>
+<span class=m id=c2 style="font-weight:200">Pedalera ñáéíóú ¿¡ ↑↓</span><br>
+<span class=m id=c9 style="font-weight:900">Pedalera ñáéíóú ¿¡ ↑↓</span><br>
+<span class=k id=r2 style="font-weight:200">-12.4 dB · 48 kHz</span><br>
+<span class=k id=r6 style="font-weight:600">-12.4 dB · 48 kHz</span><br>
+<span class=f id=fb>Pedalera ñáéíóú ¿¡ ↑↓</span>
+<pre id=out>midiendo…</pre>
+<script>
+document.fonts.ready.then(async () => {
+  const w = id => +document.getElementById(id).getBoundingClientRect().width.toFixed(2);
+  const r = {
+    chivo_cargada:  document.fonts.check("40px Chivo"),
+    mono_cargada:   document.fonts.check("40px 'Roboto Mono'"),
+    chivo_200: w('c2'), chivo_900: w('c9'),
+    mono_200:  w('r2'), mono_600:  w('r6'),
+    serif_fallback: w('fb'),
+    familias: [...document.fonts].map(f => `${f.family} ${f.weight} ${f.status}`),
+  };
+  // Un mono tiene el MISMO avance en todos los pesos, así que el ancho no
+  // sirve para saber si el eje responde. Se mide la TINTA: más peso = más
+  // píxeles pintados.
+  const tinta = (fam, peso) => {
+    const cv = Object.assign(document.createElement('canvas'), {width: 900, height: 90});
+    const x = cv.getContext('2d');
+    x.font = `${peso} 60px '${fam}'`;
+    x.fillStyle = '#fff';
+    x.fillText('-12.4 dB 48 kHz', 8, 66);
+    const d = x.getImageData(0, 0, cv.width, cv.height).data;
+    let n = 0;
+    for (let i = 3; i < d.length; i += 4) if (d[i] > 40) n++;
+    return n;
+  };
+  r.tinta_mono_200 = tinta('Roboto Mono', 200);
+  r.tinta_mono_600 = tinta('Roboto Mono', 600);
+  r.tinta_chivo_200 = tinta('Chivo', 200);
+  r.tinta_chivo_900 = tinta('Chivo', 900);
+  r.eje_de_peso_chivo = r.chivo_200 !== r.chivo_900 && r.tinta_chivo_900 > r.tinta_chivo_200;
+  r.eje_de_peso_mono  = r.tinta_mono_600 > r.tinta_mono_200;
+  r.eje_de_peso_funciona = r.eje_de_peso_chivo && r.eje_de_peso_mono;
+  r.no_es_el_fallback    = r.chivo_200 !== r.serif_fallback;
+  document.getElementById('out').textContent = JSON.stringify(r, null, 2);
+  console.log('[SONDA] ' + JSON.stringify(r));
+});
+</script>
