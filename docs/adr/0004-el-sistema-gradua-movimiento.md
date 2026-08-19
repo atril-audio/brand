@@ -98,12 +98,19 @@ Va en el mismo PR porque lo pide la misma épica y el mismo issue. Los tres punt
 trazos de longitud casi cero con remate redondo** (`M5 12h.01`), que es el recurso que `ico-trabajo` ya
 usaba: la clase `.ico` declara `fill:none`, así que unos círculos con relleno serían **invisibles**.
 
-⚠️ **No se verificó a tamaño real.** Y hay una razón geométrica para mirarlo cuando exista la cabecera:
+✅ **Verificado a tamaño real el 2026-08-19**, dentro de Ableton Live y con la cabecera de `F0` puesta:
+**lee**. La duda de abajo era razonable y no se materializó.
+
+Se queda escrita en vez de borrarse: el razonamiento sigue valiendo para el próximo icono de puntos, y
+un ADR que borra su duda al resolverla pierde justo lo que lo hacía útil. La razón geométrica era:
 con este recurso **el diámetro del punto es igual al peso del trazo** — `2.3` a 13px, según
 `iconos.css`. El prototipo dibujaba círculos de radio `1.7`, o sea **3.4 de diámetro** en la misma
 grilla. **Los puntos del sistema van a leerse más livianos que los del prototipo.**
 
 Es la misma clase de diferencia que la lupa (`ico-buscar` no es el SVG inline del prototipo) y se
 resuelve igual: **manda el sistema**, y la diferencia queda escrita para que nadie la «corrija» volviendo
-a un inline. Si al verlo en `F0` no lee, el arreglo correcto es **el peso por tamaño en `iconos.css`**,
-no un icono con su propio grosor — eso rompería la regla de que el peso no vive en el sprite.
+a un inline.
+
+**El plan por si no leía** —el peso por tamaño en `iconos.css`, nunca un icono con su propio grosor, que
+rompería la regla de que el peso no vive en el sprite— queda anotado **para el próximo caso**, no por
+este.
