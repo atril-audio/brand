@@ -5,12 +5,18 @@
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
-  "files": ["tokens.css", "tokens.json", "iconos.css", "iconos.svg", "marca/"],
+  "files": [
+    "tokens.css",
+    "tokens.json",
+    "iconos.css",
+    "iconos.svg",
+    "marca/"
+  ],
   "scripts": {
     "build": "node build.js",
     "verificar": "node build.js --verificar"
   },
   "devDependencies": {
-    "style-dictionary": "^4.4.0"
+    "style-dictionary": "^5.5.1"
   }
 }
