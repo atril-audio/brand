@@ -14,7 +14,9 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "verificar": "node build.js --verificar"
+    "verificar": "node build.js --verificar",
+    "verificar:repo": "node verificar_repo.mjs",
+    "verificar:todo": "npm run verificar && npm run verificar:repo"
   },
   "devDependencies": {
     "style-dictionary": "^5.5.1"

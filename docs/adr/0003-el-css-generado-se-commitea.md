@@ -79,3 +79,15 @@ consumidor que no lo entienda **ignora el ángulo, no el token**.
   El draft más nuevo de DTCG prefiere el objeto; Style Dictionary 4 consume el string de forma nativa.
   Se elige el string porque es lo que la herramienta lee hoy sin preprocesador. **Gatillo:** si algún
   consumidor futuro exige la forma objeto, la conversión es mecánica y va con su propio ADR.
+
+---
+
+## Actualización · 2026-08-19
+
+**La deuda de este ADR quedó pagada el mismo día.** `B3` montó el workflow
+[`verificar`](../../.github/workflows/verificar.yml), que corre `npm run verificar` en cada PR: un
+`tokens.css` desincronizado de su `tokens.json` **ya no se puede mergear**.
+
+La decisión no cambia —el CSS generado se commitea— pero su único punto flojo dejó de serlo. Se anota
+acá en vez de reescribir el argumento de arriba: un ADR registra lo que se pensó **cuando** se pensó,
+y esconder que hubo una ventana de disciplina pura falsearía el registro.
