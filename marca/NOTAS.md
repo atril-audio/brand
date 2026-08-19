@@ -1,7 +1,7 @@
 # marca — los artefactos de identidad
 
 **Graduados del taller el 2026-08-18.** El **porqué** de cada elección vive en
-[`../docs/adr/`](../docs/adr/) — acá, en el repo, legible por quien clone. El **historial de
+[`../docs/adr/`](../docs/adr/) — aquí, en el repo, legible por quien clone. El **historial de
 exploración** (las direcciones descartadas, las versiones de cada marca) se queda en el taller:
 `~/dev/hub/contextos/amass/work/pedalera/taller/`.
 

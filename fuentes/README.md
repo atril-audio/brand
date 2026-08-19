@@ -1,4 +1,4 @@
-# `fuentes/` — las tipografías, servidas desde acá
+# `fuentes/` — las tipografías, servidas desde aquí
 
 **Chivo** y **Roboto Mono** empaquetadas, no traídas de Google Fonts. El contrato de consumo es
 [`../fuentes.css`](../fuentes.css): quien lo incluya obtiene las dos familias sin red.
@@ -8,7 +8,7 @@
 | `chivo-latin.woff2` · `chivo-latin-ext.woff2` | Chivo **variable** · `wght 200–900` · v21 |
 | `roboto-mono-latin.woff2` · `roboto-mono-latin-ext.woff2` | Roboto Mono **variable** · `wght 200–600` · v31 |
 | `OFL-Chivo.txt` · `LICENSE-RobotoMono.txt` | **las licencias · no se borran** (ver abajo) |
-| `sonda.html` | la verificación: abrila y decí si las cuatro filas se ven distintas |
+| `sonda.html` | la verificación: ábrela y di si las cuatro filas se ven distintas |
 
 **Variables, o sea un archivo por familia y subset** en vez de uno por peso. 114 KB los cuatro.
 
@@ -24,7 +24,7 @@ Solo **`latin`** y **`latin-ext`**. `latin` (U+0000–00FF) ya cubre todos los a
 signos de apertura `¿¡` y las flechas `↑↓` de la interfaz. **No** se empaquetan griego, cirílico ni
 vietnamita: nadie los usa y son ~50 KB más.
 
-🔔 **Gatillo:** si Atril se localiza a un idioma que los necesite, se re-empaquetan acá.
+🔔 **Gatillo:** si Atril se localiza a un idioma que los necesite, se re-empaquetan aquí.
 
 ⚠️ **Los glifos de teclado (`⌘ ⇧ ⌥ ⏎ ⋯ ↗`) están afuera de estos subsets** — igual que estaban afuera
 de lo que servía Google. Caen al font del sistema, hoy y antes: **no es una regresión de este cambio**.

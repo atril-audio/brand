@@ -13,7 +13,7 @@
    Subsets: `latin` y `latin-ext` solamente. `latin` (U+0000-00FF) ya cubre
    todos los acentos del español, los signos de apertura y las flechas ↑↓ que
    usa la interfaz. NO se empaquetan griego, cirílico ni vietnamita.
-   🔔 Gatillo: si Atril se localiza a uno de esos, se re-empaqueta acá.
+   🔔 Gatillo: si Atril se localiza a uno de esos, se re-empaqueta aquí.
 
    ⚠️ Los glifos de teclado (⌘ ⇧ ⌥ ⏎ ⋯ ↗) están FUERA de estos subsets, igual
    que estaban fuera de lo que servía Google. Caen al font del sistema, hoy y
