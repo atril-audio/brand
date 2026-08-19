@@ -1,0 +1,31 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PUENTE DE NOMBRES · TEMPORAL · NO ES EL SISTEMA
+
+   La interfaz de hoy usa `--panel2`, `--panel3` y `--oro`. Mientras no se
+   renombren en `UI/index.html`, estos alias hacen que el sistema nuevo se
+   aplique sin tocar una línea de la app — que es justo lo que permite
+   fotografiarla con `disparar.py --tokens`.
+
+   ⚠️ NO está en `tokens.json` a propósito, y por dos razones (docs/adr/0003):
+     1 · no son el sistema, son compatibilidad con UN consumidor en UN estado.
+         Metidos en la fuente de verdad, cualquier consumidor futuro los
+         heredaría — un Storybook nuevo no tiene por qué conocer `--panel2`.
+     2 · `--panel3` NO es expresable en DTCG: usa `color-mix()`, y DTCG solo
+         tiene alias, no operaciones. Hornearlo a un hex sería la copia de
+         valores que el sistema prohíbe.
+
+   Se incluye DESPUÉS de `tokens.css`, y solo el consumidor que lo necesita.
+
+   🗑️ GATILLO DE BORRADO: cuando `UI/index.html` hable el vocabulario nuevo.
+      Eso pasa en la épica `F0 · el marco` de `pedalera`. Al mergear esa, este
+      archivo se borra — no se «mantiene».
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* OJO: la escalera de la app SUBE — fondo < panel < panel2 < panel3 — así que
+     `panel3` es el plano MÁS CLARO, no el hundido. Mapearlo a `--panel-hondo`
+     invertía la jerarquía y hundía los popovers. `panel3` se deriva un paso
+     arriba de `--panel-alto` en vez de inventar un color nuevo. */
+  --panel2: var(--panel-alto);
+  --panel3: color-mix(in srgb, var(--panel-alto) 88%, var(--texto) 12%);
+  --oro:    var(--medida);
+}
