@@ -97,4 +97,14 @@
   --radio-pastilla:  999px;
   --borde-nodo:      1px;   /* la barra de marca del nodo, que sí se ve */
 
+  /* ─── MOVIMIENTO · ADR-0004 ────────────────────────────────────────────────
+     una curva y dos duraciones. El prototipo tenía once duraciones, y 32 de
+     41 usos caían entre .14s y .2s: no eran cuatro decisiones, era una
+     tecleada cuatro veces. ⚠️ Lo que MIDE no usa esta curva: los medidores
+     van en `linear` y con su propia duración, porque suavizar una medición le
+     miente al ojo sobre el dato. */
+  --curva:   cubic-bezier(0.22, 0.61, 0.36, 1);   /* la única curva del sistema · arranca rápido y frena suave */
+  --rapido:  140ms;   /* lo que RESPONDE a tu mano: hover, foco, el estado de un control */
+  --calmo:   200ms;   /* lo que APARECE Y SE VA: el aviso, una capa, algo que entra */
+
 }

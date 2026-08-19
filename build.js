@@ -60,6 +60,14 @@ function gradiente(token) {
 
 function valor(token) {
   if (token.$type === 'gradient') return gradiente(token);
+  /* DTCG guarda una curva como los cuatro números sueltos. Si salieran así, el
+     consumidor tendría que escribir `cubic-bezier(var(--curva))` — o sea saber
+     que el token no es una curva sino sus coordenadas. Un token que obliga a
+     envolverlo no ahorra nada: sale ya usable. */
+  if (token.$type === 'cubicBezier') {
+    const p = token.original?.$value ?? token.$value;
+    return `cubic-bezier(${p.join(', ')})`;
+  }
   if (token.$type === 'fontFamily') {
     const fams = token.original?.$value ?? token.$value;
     /* Se citan TODAS las familias reales y ninguna palabra clave. Citar una
