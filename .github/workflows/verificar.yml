@@ -45,7 +45,7 @@ jobs:
       - run: npm ci
 
       # 1 · el sistema y su salida no pueden divergir. Es el punto flojo que el
-      #     ADR-0003 dejó anotado al decidir commitear el CSS generado: acá se cierra.
+      #     ADR-0003 dejó anotado al decidir commitear el CSS generado: aquí se cierra.
       - name: el CSS generado está en sync con tokens.json
         run: npm run verificar
 

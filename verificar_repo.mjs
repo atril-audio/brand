@@ -17,7 +17,7 @@ const chequear = (nombre, fn) => {
 
 /* Principio II de la constitución: público significa sin credenciales.
    Las licencias OFL son la otra cara: redistribuir EXIGE incluirlas, y borrarlas
-   convierte este repo en una infracción. Es lo más caro que puede romperse acá. */
+   convierte este repo en una infracción. Es lo más caro que puede romperse aquí. */
 chequear('las licencias de las tipografías están', () => {
   const necesarias = ['fuentes/OFL-Chivo.txt', 'fuentes/LICENSE-RobotoMono.txt'];
   const faltan = necesarias.filter((f) => !existsSync(f) || statSync(f).size < 1000);

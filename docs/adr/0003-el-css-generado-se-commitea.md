@@ -89,5 +89,5 @@ consumidor que no lo entienda **ignora el ángulo, no el token**.
 `tokens.css` desincronizado de su `tokens.json` **ya no se puede mergear**.
 
 La decisión no cambia —el CSS generado se commitea— pero su único punto flojo dejó de serlo. Se anota
-acá en vez de reescribir el argumento de arriba: un ADR registra lo que se pensó **cuando** se pensó,
+aquí en vez de reescribir el argumento de arriba: un ADR registra lo que se pensó **cuando** se pensó,
 y esconder que hubo una ventana de disciplina pura falsearía el registro.

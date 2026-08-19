@@ -1,7 +1,7 @@
 # brand — la identidad de Atril, en formato consumible
 
 El sistema de diseño y las marcas de **Atril**, en archivos que un build puede leer sin
-traducción. No hay código de producto acá: solo tokens, marcas y assets.
+traducción. No hay código de producto aquí: solo tokens, marcas y assets.
 
 > **Este repo es el único PÚBLICO de Atril**, y por una razón de plomería, no ideológica: lo van a
 > consumir stacks distintos (C++/CMake, web) y público significa **sin credenciales en ninguno**.
@@ -20,7 +20,7 @@ traducción. No hay código de producto acá: solo tokens, marcas y assets.
 | `iconos.css` | el contrato del set: `.ico` + los tres pesos |
 | `marca/` | símbolo e ícono de cada producto, y el lockup del logotipo |
 | `marca/NOTAS.md` | la regla de familia y **las dos cosas que no hay que "corregir"** |
-| [`docs/`](docs/) | **el sistema documentado**: qué se decidió y por qué (`adr/`), y cómo se trabaja acá |
+| [`docs/`](docs/) | **el sistema documentado**: qué se decidió y por qué (`adr/`), y cómo se trabaja aquí |
 
 ## Cómo se consume
 
@@ -31,7 +31,7 @@ Nada de copiar y pegar: **el que consume trae el archivo, no sus valores.**
 | **Pedalera** (CMake / C++) | el build trae `tokens.css`, `fuentes.css`, `fuentes/`, `iconos.svg` e `iconos.css` a `UI/` |
 | una web futura | `npm i` del repo, o por CDN |
 
-⚠️ **`fuentes.css` no es opcional si querés que se vea como Pedalera.** Nombrar `"Chivo"` en
+⚠️ **`fuentes.css` no es opcional si quieres que se vea como Pedalera.** Nombrar `"Chivo"` en
 `tokens.css` no la provee: sin `fuentes.css` (o sin red, con un `<link>` a Google) el texto cae al font
 del sistema y el gain staging deja de ser monoespaciado. Ver [`fuentes/`](fuentes/).
 
@@ -45,7 +45,7 @@ build.
 
 ```bash
 npm ci
-# editás tokens.json
+# editas tokens.json
 npm run build       # regenera tokens.css
 npm run verificar   # falla si el CSS no coincide con el JSON
 ```
@@ -75,7 +75,7 @@ y la recibe cualquier herramienta que lea DTCG.
 Si aparece un `#hex` en el CSS de un producto, el sistema está roto. La app de hoy tiene 40 hex
 sueltos y 17 `rgba()` con valores viejos inlineados: es deuda conocida e inventariada, no un permiso.
 
-## Cómo se trabaja acá
+## Cómo se trabaja aquí
 
 | | dónde |
 |---|---|
@@ -90,6 +90,6 @@ sueltos y 17 `rgba()` con valores viejos inlineados: es deuda conocida e inventa
 ## De dónde salió todo esto
 
 Del taller, en el hub: `work/pedalera/taller/`. Ahí vive el **historial de exploración** (las
-direcciones descartadas, las versiones de cada marca, lo que no funcionó y por qué). Acá solo llega
+direcciones descartadas, las versiones de cada marca, lo que no funcionó y por qué). Aquí solo llega
 lo aprobado — y desde el 2026-08-19, **también su porqué**: vive en [`docs/adr/`](docs/adr/), donde
 quien clona el repo puede leerlo.

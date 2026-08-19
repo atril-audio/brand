@@ -47,4 +47,4 @@ El caso de **B** es el que justifica el gate en las dos direcciones: sin la prue
 - ⚠️ **Deuda conocida:** el disparador que produce estas capturas vive en el hub de Marco
   (`work/pedalera/taller/scripts/disparar.py`), **no en este repo**. Quien clone `brand` no puede
   re-verificar una marca. **Gatillo:** el día que haya que tocar una marca o agregar una nueva, el
-  disparador gradúa acá y esta línea se borra.
+  disparador gradúa aquí y esta línea se borra.

@@ -3,7 +3,7 @@
 Un ADR por decisión. **Inmutable:** no se edita para cambiar de opinión — se escribe uno nuevo que
 lo **supersede** y se marca el viejo. Lo que vale es el argumento, no el veredicto.
 
-Acá van las decisiones de **este** repo: forma de las marcas, formato de los tokens, cómo se empaqueta
+Aquí van las decisiones de **este** repo: forma de las marcas, formato de los tokens, cómo se empaqueta
 el sistema. Las que **cruzan repos** (por qué `brand` es su propio repo, cómo lo consume `pedalera`)
 viven en [`atril-meta/why/`](https://github.com/atril-audio/meta/tree/main/why).
 

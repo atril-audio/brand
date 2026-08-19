@@ -2,7 +2,7 @@
 
 **Los principios que el agente obedece** al tocar el sistema de identidad de Atril. El *porqué* de
 cada uno vive en `docs/adr/` y en `atril-meta/reference/rulebook-desarrollo.md`. Esto es
-deliberadamente **delgado**: duplicar el rulebook acá lo condena a despegarse.
+deliberadamente **delgado**: duplicar el rulebook aquí lo condena a despegarse.
 
 **Versión:** 1.0.0 · **Ratificada:** 2026-08-19 · **Última enmienda:** 2026-08-19
 
@@ -15,7 +15,7 @@ mal escrito, no. *La significancia decide* — rulebook §2. El issue apunta a l
 ### II. Público significa sin credenciales, en ningún lugar
 Este es **el único repo público de Atril**, y eso es plomería, no ideología: lo consumen stacks
 distintos y habilita CI sin secretos. La consecuencia es dura: ni un token, ni una URL firmada, ni un
-path de la máquina de nadie — **ni en el código ni en un issue ni en un commit**. Lo que entra acá
+path de la máquina de nadie — **ni en el código ni en un issue ni en un commit**. Lo que entra aquí
 es visible para siempre, incluso si se borra después.
 
 ### III. El consumidor trae el archivo, no sus valores
@@ -37,7 +37,7 @@ En masa, centrada, radial, con contraforma calada. **No hay una gramática de tr
 intentó y falló. Ver [`docs/adr/0001`](../../docs/adr/0001-cada-marca-es-su-objeto.md).
 
 ### VII. Nunca a `main`
-Rama → PR → checks → **squash**. Acá no es solo disciplina: `brand` es público, así que es el
+Rama → PR → checks → **squash**. Aquí no es solo disciplina: `brand` es público, así que es el
 **único** repo de Atril donde GitHub hace cumplir el ruleset de verdad.
 
 ### VIII. La documentación viaja con el código
@@ -49,6 +49,6 @@ cómo. Un cambio que deja la doc atrás **no está hecho** — rulebook §5.
 Esta constitución **manda sobre cualquier otra práctica de este repo**. Enmendarla es un PR que dice
 qué cambia y por qué; si el cambio es estructural, además lleva un ADR.
 
-**Lo que NO se decide acá:** el flujo, el DoD y dónde viven las tareas viven en el
+**Lo que NO se decide aquí:** el flujo, el DoD y dónde viven las tareas viven en el
 [rulebook](https://github.com/atril-audio/meta/blob/main/reference/rulebook-desarrollo.md), que es
 cross-repo. Si algo se contradice, **manda el rulebook**.

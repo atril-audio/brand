@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   ATRIL · EL SISTEMA — la fuente de verdad. `tokens.css` se GENERA de acá
+   ATRIL · EL SISTEMA — la fuente de verdad. `tokens.css` se GENERA de aquí
    (`npm run build`): editarlo a mano se pierde en el próximo build. Destilado
    el 2026-08-17 de las decisiones del taller; el porqué de cada una vive en
    `docs/adr/`. LA REGLA QUE GOBIERNA TODO: el color aparece cuando algo está
@@ -21,9 +21,9 @@
   /* ─── TEXTO · tres niveles, no más. ───────────────────────────────────── */
   --texto:      #e8e8ea;   /* nombres, números que importan */
   --texto-sec:  #adaeb3;   /* prosa, lectura */
-  --tenue:      #7c7d83;   /* etiquetas, unidades, lo que se lee si lo buscás */
+  --tenue:      #7c7d83;   /* etiquetas, unidades, lo que se lee si lo buscas */
 
-  /* ─── SEÑAL · el color solo acá. ──────────────────────────────────────── */
+  /* ─── SEÑAL · el color solo aquí. ─────────────────────────────────────── */
   --acento:        #4ec5d4;   /* está pasando: nivel, selección, lo vivo */
   --acento-tinta:  #05171b;   /* texto sobre acento */
   --medida:        #d9c9a8;   /* la MEDICIÓN: números, ejes, trazas, rótulos de dato */
@@ -34,8 +34,8 @@
   /* ─── MEDICIÓN ─────────────────────────────────────────────────────────────
      el degradado vive en el RIEL: el riel ES la escala, así que el rojo queda
      siempre en el mismo lugar y el medidor se lee de reojo. Es el argumento
-     del medidor de hardware, y es el caso de uso real: tenés las manos en la
-     guitarra y no podés leer un número. */
+     del medidor de hardware, y es el caso de uso real: tienes las manos en la
+     guitarra y no puedes leer un número. */
   --riel:         #232429;
   --pico-bajo:    #5aa06f;
   --pico-medio:   #d3ab5c;
@@ -73,7 +73,7 @@
   --t-display:  19px;   /* el número grande del diagnóstico */
 
   /* ─── ESPACIO · E1 «Aire» ──────────────────────────────────────────────────
-     la elegancia sale de acá, no del color: el MVP creció apurado y quedó
+     la elegancia sale de aquí, no del color: el MVP creció apurado y quedó
      denso. Siete pasos, y nada de valores fuera de la escala. */
   --e1:  4px;
   --e2:  7px;
