@@ -1,0 +1,60 @@
+# El primer check de Atril.
+#
+# Hasta hoy el ruleset de `main` en este repo exigía «cero checks», que es lo mismo
+# que no exigir nada: el PR era obligatorio pero no había ninguna compuerta que
+# pudiera decir no. Este workflow es esa compuerta.
+#
+# ⚠️ El nombre del job (`verificar`) ES el nombre del check requerido. Renombrarlo
+# rompe el ruleset en silencio: GitHub queda esperando un check que ya no existe y
+# `main` se vuelve inmergeable. Si se renombra, se cambia también en `atril-infra`.
+name: verificar
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Menos privilegio del que trae por defecto: este job solo lee el repo. Nada de
+# escribir contenidos, ni tocar issues, ni publicar paquetes.
+permissions:
+  contents: read
+
+# Un push nuevo sobre la misma rama cancela el run anterior: no tiene sentido
+# pagar por verificar un commit que ya quedó atrás.
+concurrency:
+  group: verificar-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: verificar
+    runs-on: ubuntu-latest
+    steps:
+      # Las actions van fijadas por tag mayor y no por SHA a propósito: este job
+      # no recibe secrets y solo tiene permiso de lectura, así que el riesgo de
+      # una action comprometida está acotado a un check en falso.
+      # 🔔 Gatillo: el día que este workflow necesite un secret o permiso de
+      #    escritura, se fija por SHA.
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # 1 · el sistema y su salida no pueden divergir. Es el punto flojo que el
+      #     ADR-0003 dejó anotado al decidir commitear el CSS generado: acá se cierra.
+      - name: el CSS generado está en sync con tokens.json
+        run: npm run verificar
+
+      # 2 · las licencias OFL, los woff2, y que ningún CSS escriba un color a mano
+      - name: las reglas del repo se cumplen
+        run: npm run verificar:repo
+
+      # 3 · Solo lo que LLEGA a un consumidor. Las vulnerabilidades de
+      #     devDependencies las reporta Dependabot y no deben tumbar un PR de
+      #     contenido: son un trabajo aparte, con su propio ritmo.
+      - name: nada vulnerable llega a un consumidor
+        run: npm audit --omit=dev --audit-level=high

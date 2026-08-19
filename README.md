@@ -52,9 +52,16 @@ npm run verificar   # falla si el CSS no coincide con el JSON
 
 `tokens.css` **se commitea igual**, generado y versionado: `pedalera` es un plugin C++/JUCE que lo
 copia desde su `CMakeLists.txt`, y no debe necesitar Node para compilar audio. El costo —que un
-artefacto generado dentro de git puede desincronizarse— lo cubre `npm run verificar`, que el CI va a
-correr en cada PR ([épica `B3`](https://github.com/atril-audio/brand/issues/4)). Hasta entonces es
-disciplina, y está dicho en el [ADR-0003](docs/adr/0003-el-css-generado-se-commitea.md).
+artefacto generado dentro de git puede desincronizarse— lo cierra el CI: el workflow
+[`verificar`](.github/workflows/verificar.yml) corre `npm run verificar` **en cada PR**, así que un CSS
+que no coincida con su JSON no se puede mergear. El porqué de commitearlo está en el
+[ADR-0003](docs/adr/0003-el-css-generado-se-commitea.md).
+
+Todo lo que el CI corre, corre igual en tu máquina:
+
+```bash
+npm run verificar:todo   # el sync del CSS + las reglas del repo
+```
 
 **Agregar un token** es agregarlo al grupo que le corresponde con su `$type` y su `$description`. La
 descripción no es adorno: es el argumento de por qué el token existe, sale como comentario en el CSS
