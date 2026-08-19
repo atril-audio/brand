@@ -11,6 +11,7 @@ viven en [`atril-meta/why/`](https://github.com/atril-audio/meta/tree/main/why).
 |---|---|---|
 | [0001](0001-cada-marca-es-su-objeto.md) | Cada marca es su objeto, en masa, desde su vista canónica — no hay gramática de trazo compartida | 2026-08-17 |
 | [0002](0002-toda-marca-se-verifica-a-16px-reales.md) | Ninguna marca se fija sin verla a 16px físicos reales | 2026-08-17 |
+| [0003](0003-el-css-generado-se-commitea.md) | El `tokens.css` generado se commitea · el puente temporal no entra a la fuente · el ángulo del degradado va en `$extensions` | 2026-08-19 |
 
 **Formato:** `NNNN-slug-en-kebab.md`, numeración corrida. Título, fecha, estado
 (`aceptado` · `superseded por NNNN`), el contexto, la decisión, y **las consecuencias — incluidas las

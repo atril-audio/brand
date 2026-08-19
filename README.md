@@ -11,7 +11,9 @@ traducción. No hay código de producto acá: solo tokens, marcas y assets.
 
 | | qué es |
 |---|---|
-| `tokens.css` | **el sistema**: color, tipografía, y las escalas de espacio y forma. Un bloque, sin `[data-*]` |
+| `tokens.json` | ⭐ **la fuente de verdad** — el sistema en formato [DTCG](https://tr.designtokens.org/format/): 50 tokens tipados, cada uno con su porqué en `$description` |
+| `tokens.css` | **generado** de `tokens.json` con `npm run build`. Es lo que consumen los builds. **No se edita a mano** |
+| `compat/` | el puente de nombres **temporal** para la app vieja, con su gatillo de borrado. No es el sistema |
 | `iconos.svg` | el sprite de 20 iconos de línea, un `<symbol>` cada uno |
 | `iconos.css` | el contrato del set: `.ico` + los tres pesos |
 | `marca/` | símbolo e ícono de cada producto, y el lockup del logotipo |
@@ -29,6 +31,28 @@ Nada de copiar y pegar: **el que consume trae el archivo, no sus valores.**
 
 El mecanismo exacto está en
 [`atril-meta/why/0002-como-se-consume-brand.md`](https://github.com/atril-audio/meta/blob/main/why/0002-como-se-consume-brand.md).
+
+## Cómo se edita el sistema
+
+**Se edita `tokens.json`, nunca `tokens.css`.** Un cambio a mano en el CSS se pierde en el próximo
+build.
+
+```bash
+npm ci
+# editás tokens.json
+npm run build       # regenera tokens.css
+npm run verificar   # falla si el CSS no coincide con el JSON
+```
+
+`tokens.css` **se commitea igual**, generado y versionado: `pedalera` es un plugin C++/JUCE que lo
+copia desde su `CMakeLists.txt`, y no debe necesitar Node para compilar audio. El costo —que un
+artefacto generado dentro de git puede desincronizarse— lo cubre `npm run verificar`, que el CI va a
+correr en cada PR ([épica `B3`](https://github.com/atril-audio/brand/issues/4)). Hasta entonces es
+disciplina, y está dicho en el [ADR-0003](docs/adr/0003-el-css-generado-se-commitea.md).
+
+**Agregar un token** es agregarlo al grupo que le corresponde con su `$type` y su `$description`. La
+descripción no es adorno: es el argumento de por qué el token existe, sale como comentario en el CSS
+y la recibe cualquier herramienta que lea DTCG.
 
 ## La regla que lo mantiene sano
 
