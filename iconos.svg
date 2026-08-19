@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
 <!-- ═══════════════════════════════════════════════════════════════════════
      PEDALERA · SET DE ICONOS DE LÍNEA · fijado 2026-08-17
-     20 símbolos. Grilla de 24 · fill:none · stroke:currentColor · remates y
+     21 símbolos. Grilla de 24 · fill:none · stroke:currentColor · remates y
      uniones redondeados. El peso NO está acá: lo pone el CSS por tamaño.
 
      Uso:  <svg class="ico chico"><use href="#ico-bypass"/></svg>
@@ -42,6 +42,12 @@
   <symbol id="ico-buscar" viewBox="0 0 24 24"><!-- buscar · barra · 12px -->
     <path d="M16.5 11a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/><path d="M15.2 15.2L19.5 19.5"/>
   </symbol>
+  <symbol id="ico-mas" viewBox="0 0 24 24"><!-- mas acciones · cabecera · 13px
+       Los puntos se dibujan como trazos de longitud casi cero con remate
+       redondo, igual que en ico-trabajo. Circulos con relleno serian invisibles:
+       la clase .ico declara fill:none. -->
+    <path d="M5 12h.01"/><path d="M12 12h.01"/><path d="M19 12h.01"/>
+  </symbol>
   <symbol id="ico-nivel" viewBox="0 0 24 24"><!-- nivel · barra · 12px -->
     <path d="M4 12h16"/><path d="M12.4 8.4h3.2v7.2h-3.2z"/>
   </symbol>
@@ -51,7 +57,9 @@
   <symbol id="ico-rigs" viewBox="0 0 24 24"><!-- rigs · barra · 12px -->
     <path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/>
   </symbol>
-  <symbol id="ico-plantillas" viewBox="0 0 24 24"><!-- plantillas · barra · 12px -->
+  <symbol id="ico-plantillas" viewBox="0 0 24 24"><!-- ⚠️ MUERTO · las plantillas salieron del producto el 2026-08-18.
+       No se borra aqui: borrar rompe a quien consume, en silencio y en otro
+       repo, y eso pide SDD + ADR. Ver brand#15. -->
     <path d="M6 4.5h8.5L18 8v11.5H6z"/><path d="M9 11.5h6M9 15h4"/>
   </symbol>
   <symbol id="ico-analisis" viewBox="0 0 24 24"><!-- análisis · franja de monitoreo -->
