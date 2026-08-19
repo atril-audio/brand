@@ -54,7 +54,10 @@ silencio y en otro repo: llevan ADR y aviso.
   Es un gate, no una revisión opcional: descartó tres variantes y validó dos.
 - **Español de México, forma "tú".** Nunca voseo argentino. Aplica a las `$description` de
   `tokens.json`, que **salen al CSS generado y a un repo público**. Ya se rompió cuatro veces.
-- **Commits en español, imperativo, con el PORQUÉ en el cuerpo.**
+- **[Conventional Commits](https://github.com/atril-audio/meta/blob/main/reference/convenciones.md#commits)**,
+  resumen en español e imperativo, con el PORQUÉ en el cuerpo. El **tipo** es del estándar y va en inglés
+  (`feat` `fix` `docs` `refactor` `perf` `test` `build` `ci` `chore`); el **alcance** va en español:
+  `feat(tokens):`, `docs(adr):`, `fix(fuentes):`. **El tipo no es el alcance.**
 - **La documentación viaja en el mismo PR** (DoD, punto 4).
 
 ## El flujo SDD
