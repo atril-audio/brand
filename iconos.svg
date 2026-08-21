@@ -48,6 +48,33 @@
        la clase .ico declara fill:none. -->
     <path d="M5 12h.01"/><path d="M12 12h.01"/><path d="M19 12h.01"/>
   </symbol>
+  <!-- ── LOS RIGS ─────────────────────────────────────────────────────────
+       Las cuatro acciones de un rig guardado. Suben desde el prototipo de
+       Pedalera, donde vivian en un objeto local `ICOR` — que es exactamente el
+       lugar donde un icono NO tiene que vivir: el sistema no se copia, se trae.
+
+       Las cuatro son de 28x28 en su boton y se dibujan con el peso `medio`. -->
+  <symbol id="ico-favorito" viewBox="0 0 24 24"><!-- favorito · estrella · 14px -->
+    <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/>
+  </symbol>
+  <symbol id="ico-duplicar" viewBox="0 0 24 24"><!-- duplicar · dos hojas · 14px
+       La de atras se dibuja SOLO por sus dos lados visibles: cerrarla entera se
+       veria como un cuadrado detras de otro, y lo que dice el icono es que una es
+       copia de la otra. -->
+    <rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 5.5H5.5v10"/>
+  </symbol>
+  <symbol id="ico-renombrar" viewBox="0 0 24 24"><!-- renombrar · lapiz · 14px
+       ⚠️ NO es `ico-abrir`, que tambien es un lapiz: ese abre el editor de un
+       plugin y este cambia un nombre. Dos acciones distintas con el mismo dibujo
+       se confunden, asi que este va con la punta mas marcada y sin la diagonal
+       larga del otro. -->
+    <path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M14.5 5.5l4 4"/>
+  </symbol>
+  <symbol id="ico-borrar" viewBox="0 0 24 24"><!-- borrar · tacho · 14px
+       Un tacho y NO una ×: la × de `ico-sacar` saca un efecto de la cadena, que
+       es reversible con ⌘Z. Esto borra un archivo del disco. -->
+    <path d="M5 7h14M10 7V5h4v2M8 7l1 12h6l1-12"/>
+  </symbol>
   <symbol id="ico-nivel" viewBox="0 0 24 24"><!-- nivel · barra · 12px -->
     <path d="M4 12h16"/><path d="M12.4 8.4h3.2v7.2h-3.2z"/>
   </symbol>

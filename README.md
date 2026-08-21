@@ -16,7 +16,7 @@ traducción. No hay código de producto aquí: solo tokens, marcas y assets.
 | `compat/` | el puente de nombres **temporal** para la app vieja, con su gatillo de borrado. No es el sistema |
 | `fuentes.css` | los `@font-face` de Chivo y Roboto Mono, servidas desde **este** repo |
 | `fuentes/` | los `woff2` **variables** + **las licencias OFL** (no se borran) + la sonda de verificación |
-| `iconos.svg` | el sprite de 22 iconos de línea, un `<symbol>` cada uno |
+| `iconos.svg` | el sprite de 26 iconos de línea, un `<symbol>` cada uno |
 | `iconos.css` | el contrato del set: `.ico` + los tres pesos |
 | `marca/` | símbolo e ícono de cada producto, y el lockup del logotipo |
 | `marca/NOTAS.md` | la regla de familia y **las dos cosas que no hay que "corregir"** |
