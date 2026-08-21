@@ -11,12 +11,12 @@ traducción. No hay código de producto aquí: solo tokens, marcas y assets.
 
 | | qué es |
 |---|---|
-| `tokens.json` | ⭐ **la fuente de verdad** — el sistema en formato [DTCG](https://tr.designtokens.org/format/): 50 tokens tipados, cada uno con su porqué en `$description` |
+| `tokens.json` | ⭐ **la fuente de verdad** — el sistema en formato [DTCG](https://tr.designtokens.org/format/): 51 tokens tipados, cada uno con su porqué en `$description` |
 | `tokens.css` | **generado** de `tokens.json` con `npm run build`. Es lo que consumen los builds. **No se edita a mano** |
 | `compat/` | el puente de nombres **temporal** para la app vieja, con su gatillo de borrado. No es el sistema |
 | `fuentes.css` | los `@font-face` de Chivo y Roboto Mono, servidas desde **este** repo |
 | `fuentes/` | los `woff2` **variables** + **las licencias OFL** (no se borran) + la sonda de verificación |
-| `iconos.svg` | el sprite de 20 iconos de línea, un `<symbol>` cada uno |
+| `iconos.svg` | el sprite de 22 iconos de línea, un `<symbol>` cada uno |
 | `iconos.css` | el contrato del set: `.ico` + los tres pesos |
 | `marca/` | símbolo e ícono de cada producto, y el lockup del logotipo |
 | `marca/NOTAS.md` | la regla de familia y **las dos cosas que no hay que "corregir"** |
