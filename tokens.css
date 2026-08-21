@@ -43,6 +43,7 @@
   --escala-pico:  linear-gradient(90deg, var(--pico-bajo) 0 55%,
                                          var(--pico-medio) 78%,
                                          var(--pico-alto) 100%);
+  --traza:        #8fb6d9;   /* ACERO · con lo que se DIBUJA una medición: la elipse del goniómetro, las barras de la distribución, la onda del osciloscopio, la barra de la correlación. No es `medida`: `medida` es para los NÚMEROS y los rótulos —arena, se lee como texto— y un trazo se sigue con el ojo, no se lee; darles el mismo color hace que el dibujo parezca un rótulo grande. Es el mismo tono que `marca-1` pero más claro, así que se lee como familia y no como un color nuevo suelto. Se eligió MIRANDO —contra jade (verde frío) y luz (blanco hueso)— sobre la maqueta viva. Lo que tiene zonas de RIESGO no lleva traza: un riel de nivel usa `escala-pico`, porque ahí la posición ES el valor y el valor ES el riesgo. */
 
   /* ─── MARCAS DE FABRICANTE ─────────────────────────────────────────────────
      cinco tonos para la barra izquierda del nodo y de la fila. No son señal:
