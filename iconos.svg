@@ -48,6 +48,18 @@
        la clase .ico declara fill:none. -->
     <path d="M5 12h.01"/><path d="M12 12h.01"/><path d="M19 12h.01"/>
   </symbol>
+  <symbol id="ico-alerta" viewBox="0 0 24 24"><!-- alerta · triangulo · 12px
+       El unico icono del set que se dibuja para GRITAR, y por eso es el unico que
+       se usa siempre con `--aviso`. Sube desde el prototipo de Pedalera, donde
+       estaba inline en el bloque de un nodo caido.
+
+       Triangulo y no circulo: un circulo con «!» es informacion, un triangulo es
+       «algo se rompio». La diferencia importa porque este icono aparece sobre algo
+       que el producto YA resolvio solo —la señal se puentea— asi que tiene que
+       decir «mira esto» y no «se detuvo todo». -->
+    <path d="M12 8v5M12 17h.01"/>
+    <path d="M10.3 3.9L2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"/>
+  </symbol>
   <!-- ── LOS RIGS ─────────────────────────────────────────────────────────
        Las cuatro acciones de un rig guardado. Suben desde el prototipo de
        Pedalera, donde vivian en un objeto local `ICOR` — que es exactamente el
